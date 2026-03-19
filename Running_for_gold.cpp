@@ -9,6 +9,7 @@ int main()
     {
         int n; cin>>n;
         int r[n][5];
+        int player = 1;
         if(n == 1){
             cout<<1<<'\n';
         }
@@ -21,7 +22,6 @@ int main()
                     cin>>r[i][j];
                 }
             }
-            int player;
             for(int i=0; i<n; i++)
             {
                 for(int k=i+1; k<n; k++)
