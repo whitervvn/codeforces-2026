@@ -24,7 +24,7 @@ int main()
             int player;
             for(int i=0; i<n; i++)
             {
-                for(int k=i+1; k<5; k++)
+                for(int k=i+1; k<n; k++)
                 {
                     for(int j=0; j<5; j++)
                     {
