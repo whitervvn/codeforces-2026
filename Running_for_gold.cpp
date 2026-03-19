@@ -33,6 +33,11 @@ int main()
                             player = i;
                             cout<<r[i][j]<<" "<<r[k][j]<<" "<<player<<endl;
                         }
+                        else
+                        {
+                            player = k;
+                            cout<<r[i][j]<<" "<<r[k][j]<<" "<<player<<endl;
+                        }
                     }
                 }
             }
