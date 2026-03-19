@@ -8,18 +8,36 @@ int main()
     while(t--)
     {
         int n; cin>>n;
-
-        for(int i = 0; i < n; i++)
+        int r[n][5];
+        if(n == 1){
+            cout<<1<<'\n';
+        }
+        else
         {
-            int R[n][5]; //r[i][j], n°atleta y n°maraton
-            for(int i = 0; i < n; i++)
+            for(int i=0; i<n; i++)
             {
-                for(int j = 0; j < 5; j++)
+                for(int j=0; j<5; j++)
                 {
-                    cin>>R[i][j];
+                    cin>>r[i][j];
+                }
+            }
+            int player;
+            for(int i=0; i<n; i++)
+            {
+                for(int k=i+1; k<5; k++)
+                {
+                    for(int j=0; j<5; j++)
+                    {
+                        //obtener el mejor ranking
+                        if(r[i][j] < r[k][j]){
+                            player = i;
+                            cout<<r[i][j]<<" "<<r[k][j]<<" "<<player<<endl;
+                        }
+                    }
                 }
             }
         }
+
     }
 
 }
