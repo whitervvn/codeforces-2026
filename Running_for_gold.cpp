@@ -4,24 +4,24 @@ using namespace std;
 int main()
 {
     int t; cin>>t;
-
     while(t--)
     {
         int n; cin>>n;
         int r[n][5];
         int player = 1;
+   
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<5; j++)
+            {
+                cin>>r[i][j];
+            }
+        }
         if(n == 1){
             cout<<1<<'\n'; continue; 
         } 
         else
         {
-            for(int i=0; i<n; i++)
-            {
-                for(int j=0; j<5; j++)
-                {
-                    cin>>r[i][j];
-                }
-            }
             for(int i=0; i<n; i++)
             {
                 for(int k=i+1; k<n; k++)
@@ -45,21 +45,24 @@ int main()
                         }
                     }
                     //obtener el ganador
-                    if(cont_i > 3){
-                        cout<<i+1<<'\n';
-                    }
-                    else if(cont_k > 3)
+                    if(cont_i > cont_k)
                     {
-                        cout<<k+1<<'\n';
+                        winner[i]++;
+                        if(winner[i] >= 3)
+                        {
+                            cout<<i+1<<'\n';
+                        }
                     }
-                    else
+                    else if(cont_k > cont_i)
                     {
-                        cout<<-1<<'\n';
+                        winner[k]++;
+                        if(winner[k] >= 3)
+                        {
+                            cout<<k+1<<'\n';
+                        }
                     }
                 }
             }
         }
-
     }
-
 }
