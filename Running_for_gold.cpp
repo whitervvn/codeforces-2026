@@ -28,13 +28,9 @@ int main()
                 int cont_k = 0;
                 for(int j=0; j<5; j++){
                     if(r[i][j] < r[k][j]){
-                        //player = i;
-                        //cout<<player<<endl;
                         cont_i++;
                     }
                     else{
-                        //player = k;
-                        //cout<<"player: "<<player<<endl;
                         cont_k++;
                     }
                     
